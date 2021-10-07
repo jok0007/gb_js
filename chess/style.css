@@ -1,0 +1,41 @@
+.wrapper {
+    width: 600px;
+    height: 600px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.row span {
+    text-align: center;
+    flex: 1 1 auto;
+}
+.letter-inverted {
+    transform: rotate(180deg);
+}
+.white-cell,
+.black-cell,
+.empty-cell {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.white-cell {
+    background-color: rgb(224, 222, 195);
+}
+.black-cell {
+    background-color: rgb(119, 119, 119);
+}
+.chess-piece,
+.chess-piece-white {
+    font-size: 32px;
+    display: block;
+    cursor: grab;
+}
+.chess-piece-white {
+    transform: rotate(180deg);
+    color: white;
+}

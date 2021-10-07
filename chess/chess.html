@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Шахматы</title>
+</head>
+
+<body>
+    <div class="wrapper">
+    </div>
+
+    <script>
+
+        var wrapper = document.querySelector('.wrapper');
+
+        for (let i = 0, e = 9; i < 10, e >= 0; i++, e--) {
+            let row = document.createElement('div');
+            row.classList.add('row');
+            wrapper.append(row);
+            for (let j = 64; j < 74; j++) {
+                //поле
+                if (i > 0 && i < 9) {
+                    if (j > 64 && j < 73) {
+                        let column = document.createElement('div');
+                        if (i % 2 == 0) {
+                            if (j % 2 == 0) {
+                                column.classList.add('white-cell');
+                            } else {
+                                column.classList.add('black-cell');
+                            }
+                            row.append(column);
+                        } else {
+                            if (j % 2 == 0) {
+                                column.classList.add('black-cell');
+                            } else {
+                                column.classList.add('white-cell');
+                            }
+                            row.append(column);
+                        }
+                        //черные
+                        if (i == 7) {
+                            let pawn = document.createElement('span');
+                            pawn.innerHTML = '&#9823;';
+                            pawn.classList.add('chess-piece');
+                            column.append(pawn);
+                        }
+                        if (i == 8 && j == 65 || i == 8 && j == 72) {
+                            let rook = document.createElement('span');
+                            rook.innerHTML = '&#9820;';
+                            rook.classList.add('chess-piece');
+                            column.append(rook);
+                        }
+                        if (i == 8 && j == 66 || i == 8 && j == 71) {
+                            let horse = document.createElement('span');
+                            horse.innerHTML = '&#9822;';
+                            horse.classList.add('chess-piece');
+                            column.append(horse);
+                        }
+                        if (i == 8 && j == 67 || i == 8 && j == 70) {
+                            let officer = document.createElement('span');
+                            officer.innerHTML = '&#9821;';
+                            officer.classList.add('chess-piece');
+                            column.append(officer);
+                        }
+                        if (i == 8 && j == 68) {
+                            let queen = document.createElement('span');
+                            queen.innerHTML = '&#9819;';
+                            queen.classList.add('chess-piece');
+                            column.append(queen);
+                        }
+                        if (i == 8 && j == 69) {
+                            let king = document.createElement('span');
+                            king.innerHTML = '&#9818;';
+                            king.classList.add('chess-piece');
+                            column.append(king);
+                        }
+                        //белые
+                        if (i == 2) {
+                            let pawnWhite = document.createElement('span');
+                            pawnWhite.innerHTML = '&#9823;';
+                            pawnWhite.classList.add('chess-piece-white');
+                            column.append(pawnWhite);
+                        }
+                        if (i == 1 && j == 65 || i == 1 && j == 72) {
+                            let rookWhite = document.createElement('span');
+                            rookWhite.innerHTML = '&#9820;';
+                            rookWhite.classList.add('chess-piece-white');
+                            column.append(rookWhite);
+                        }
+                        if (i == 1 && j == 66 || i == 1 && j == 71) {
+                            let horseWhite = document.createElement('span');
+                            horseWhite.innerHTML = '&#9822;';
+                            horseWhite.classList.add('chess-piece-white');
+                            column.append(horseWhite);
+                        }
+                        if (i == 1 && j == 67 || i == 1 && j == 70) {
+                            let officerWhite = document.createElement('span');
+                            officerWhite.innerHTML = '&#9821;';
+                            officerWhite.classList.add('chess-piece-white');
+                            column.append(officerWhite);
+                        }
+                        if (i == 1 && j == 68) {
+                            let queenWhite = document.createElement('span');
+                            queenWhite.innerHTML = '&#9819;';
+                            queenWhite.classList.add('chess-piece-white');
+                            column.append(queenWhite);
+                        }
+                        if (i == 1 && j == 69) {
+                            let kingWhite = document.createElement('span');
+                            kingWhite.innerHTML = '&#9818;';
+                            kingWhite.classList.add('chess-piece-white');
+                            column.append(kingWhite);
+                        }
+                    } else {
+                        if (j == 73) {
+                            let columnNumeral = document.createElement('div');
+                            columnNumeral.classList.add('empty-cell', 'letter-inverted');
+                            columnNumeral.innerHTML = `${e}`;
+                            row.append(columnNumeral);
+                        } else {
+                            let columnNumeral = document.createElement('div');
+                            columnNumeral.classList.add('empty-cell');
+                            columnNumeral.innerHTML = `${e}`;
+                            row.append(columnNumeral);
+                        }
+                    }
+
+                } else {
+                    //первая и последняя строка
+                    if ((j == 64 || j == 73) && (i == 0 || i == 9)) {
+                        let letter = document.createElement('span');
+                        row.append(letter);
+                        letter.innerHTML = '';
+                    } else {
+                        if (i == 0) {
+                            let letter = document.createElement('span');
+                            letter.classList.add('letter-inverted')
+                            row.append(letter);
+                            letter.innerHTML = `&#${j};`;
+                        } else {
+                            let letter = document.createElement('span');
+                            row.append(letter);
+                            letter.innerHTML = `&#${j};`;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

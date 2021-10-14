@@ -11,20 +11,193 @@
 <body>
     <script>
 
-        var tempCel = +prompt('Введите температуру по Цельсию'),
-            tempFar = (9 / 5) * tempCel + 32;
-        alert('Температура по Фаренгейту равн: ' + tempFar);
+        /* Урок 1 */
 
-        var name, admin;
-        name = 'Василий';
-        admin = name;
-        alert(admin);
+        /*  var tempCel = +prompt('Введите температуру по Цельсию'),
+             tempFar = (9 / 5) * tempCel + 32;
+         alert('Температура по Фаренгейту равн: ' + tempFar);
 
-        var a = 10,
-            b = 20;
-        alert(`Начальные значения a = ${a}, b = ${b}`);
-        b = a + b;
-        alert(`Конечные значения a = ${a = b - a}, b = ${b = b - a}`);
+         var name, admin;
+         name = 'Василий';
+         admin = name;
+         alert(admin);
+
+         var a = 10,
+             b = 20;
+         alert(`Начальные значения a = ${a}, b = ${b}`);
+         b = a + b;
+         alert(`Конечные значения a = ${a = b - a}, b = ${b = b - a}`);
+  */
+
+        /* ================================================================================ */
+
+        /* Урок 2 */
+
+        /* var a = 1, b = 1, c, d;
+        c = ++a; console.log(c);           // 2 используется префиксная форма записи. а было 1 увеличиваем на 1 и выводим
+        d = b++; console.log(d);           // 1 используется постфиксная форма записи. b было 1 выводим 1 и увеличиваем на 1
+        c = (2 + ++a); console.log(c);      // 5 а стало 2 после прошлой операции 2 + 2 + 1
+        d = (2 + b++); console.log(d);      // 4 b стало 2 2 + 2 выводим увеличиваем b на 1
+        console.log(a);                    // 3
+        console.log(b);                    // 3 */
+
+        /* var a = 2;
+        var x = 1 + (a *= 2); // 5
+        console.log(x); */
+
+        /* var x;
+        function num(a, b) {
+            if (a >= 0 && b >= 0) {
+                x = a - b;
+            } else if (a < 0 && b < 0) {
+                x = a * b;
+            } else {
+                x = a + b;
+            }
+            return console.log(x)
+        }
+        num(-10, -20); */
+
+        /*  var a;
+         function random(min, max) {
+             min = Math.ceil(min);
+             max = Math.floor(max);
+             a = Math.floor(Math.random() * (max - min)) + min;
+             console.log(a);
+         }
+         random(0, 15);
+
+         switch (a) {
+             case 0:
+                 console.log(++a);
+             case 1:
+                 console.log(++a);
+             case 2:
+                 console.log(++a);
+             case 3:
+                 console.log(++a);
+             case 4:
+                 console.log(++a);
+             case 5:
+                 console.log(++a);
+             case 6:
+                 console.log(++a);
+             case 7:
+                 console.log(++a);
+             case 8:
+                 console.log(++a);
+             case 9:
+                 console.log(++a);
+             case 10:
+                 console.log(++a);
+             case 11:
+                 console.log(++a);
+             case 12:
+                 console.log(++a);
+             case 13:
+                 console.log(++a);
+             case 14:
+                 console.log(++a);
+         } */
+
+        /* function sum(a, b) {
+            var s = a + b;
+            return console.log(s);
+        }
+        function sub(a, b) {
+            var u = a - b;
+            return console.log(u);
+        }
+        function mult(a, b) {
+            var m = a * b;
+            return console.log(m);
+        }
+        function div(a, b) {
+            if (b != 0) {
+                var d = a / b;
+                return console.log(d);
+            }
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '+':
+                    sum(arg1, arg2);
+                    break;
+                case '-':
+                    sub(arg1, arg2);
+                    break;
+                case '*':
+                    mult(arg1, arg2);
+                    break;
+                case '/':
+                    div(arg1, arg2);
+                    break;
+
+            }
+        }
+
+        mathOperation(20, 10, '/') */
+
+        /* ================================================================================ */
+
+        /* Урок 3 */
+
+        /* var x = 2;
+
+        function isPrime(num) {
+            var i = 2;
+            while (i < num) {
+                if (num % i == 0) {
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
+
+        while (x <= 100) {
+            if (isPrime(x)) {
+                console.log(x);
+            }
+            x++;
+        } */
+
+        /* var goods = [
+            {
+                title: 'Товар 1',
+                price: 100,
+                count: 1
+            },
+            {
+                title: 'Товар 2',
+                price: 200,
+                count: 2
+            },
+            {
+                title: 'Товар 3',
+                price: 300,
+                count: 3
+            }
+        ]
+
+        function countBasketPrice() {
+            var sum = 0;
+            for (let index = 0; index < goods.length; index++) {
+                sum += goods[index].count * goods[index].price;
+            }
+            return console.log('Стоимость всех товаров в корзине' + sum);
+        }
+        countBasketPrice(); */
+
+        /* for (let index = 0; index < 10; console.log(index++)); */
+
+        var z = '';
+        for (let i = 0; i < 20; i++) {
+            z += 'x';
+            console.log(z);
+
+        }
 
     </script>
 </body>
